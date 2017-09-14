@@ -51,6 +51,7 @@ public class ListTests {
     public void should_return_exception_when_position_doesnt_match_in_list() {
         listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b", "c"}), 4);
     }
+
     @Test
     public void should_return_element_at_given_position() {
         Assert.assertEquals("b", listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b"}), 2));
@@ -59,5 +60,10 @@ public class ListTests {
     @Test
     public void should_return_zero_when_empty_list() {
         Assert.assertEquals(0, listManagementProblems.findNumberOfElement(Collections.EMPTY_LIST));
+    }
+
+    @Test
+    public void should_return_2_when_list_has_two_element() {
+        Assert.assertEquals(2, listManagementProblems.findNumberOfElement(Arrays.asList(new String[]{"a", "b"})));
     }
 }

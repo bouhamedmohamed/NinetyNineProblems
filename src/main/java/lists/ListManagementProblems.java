@@ -41,7 +41,7 @@ public class ListManagementProblems {
 
     }
 
-    public int findNumberOfElement(List emptyList) {
-        return 0;
+    public int findNumberOfElement(List elements) {
+        return elements.size();
     }
 }
