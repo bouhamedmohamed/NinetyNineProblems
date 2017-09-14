@@ -9,6 +9,7 @@ public class ListManagementProblems {
     private final String EMPTY_STRING = "";
     private final int ONE = 1;
     private final int TAIL_BUT_ONE_MIN_SIZE = 2;
+    private final int FIRST_INDEX = 0;
 
     public String my_last(List elements) {
         if (elements.isEmpty())
@@ -56,8 +57,9 @@ public class ListManagementProblems {
     public boolean palandrom(List<String> elements) {
         if (elements.size() <= ONE)
             return true;
-        if (elements.get(0).equals(elements.get(elements.size() - 1)))
-            return palandrom(elements.subList(1, elements.size() - 2));
+        final int lastIndex = elements.size() - ONE;
+        if (elements.get(FIRST_INDEX).equals(elements.get(lastIndex)))
+            return palandrom(elements.subList(ONE, elements.size() - TAIL_BUT_ONE_MIN_SIZE));
         else
             return false;
     }
