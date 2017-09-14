@@ -55,4 +55,9 @@ public class ListTests {
     public void should_return_element_at_given_position() {
         Assert.assertEquals("b", listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b"}), 2));
     }
+
+    @Test
+    public void should_return_zero_when_empty_list() {
+        Assert.assertEquals(0, listManagementProblems.findNumberOfElement(Collections.EMPTY_LIST));
+    }
 }

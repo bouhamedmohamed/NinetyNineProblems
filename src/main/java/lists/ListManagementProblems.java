@@ -29,7 +29,7 @@ public class ListManagementProblems {
         else {
             if (!matchPositionInList(position, elements))
                 throw new ArrayIndexOutOfBoundsException();
-            
+
             return (String) elements.get(position - ONE);
         }
     }
@@ -39,5 +39,9 @@ public class ListManagementProblems {
             return false;
         return true;
 
+    }
+
+    public int findNumberOfElement(List emptyList) {
+        return 0;
     }
 }
