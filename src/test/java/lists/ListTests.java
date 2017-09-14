@@ -66,4 +66,9 @@ public class ListTests {
     public void should_return_2_when_list_has_two_element() {
         Assert.assertEquals(2, listManagementProblems.findNumberOfElement(Arrays.asList(new String[]{"a", "b"})));
     }
+
+    @Test
+    public void should_return_empty_list_in_case_of_emptylist() {
+        Assert.assertEquals(Collections.EMPTY_LIST, listManagementProblems.reverse(Collections.EMPTY_LIST));
+    }
 }

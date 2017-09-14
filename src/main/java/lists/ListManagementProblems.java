@@ -44,4 +44,8 @@ public class ListManagementProblems {
     public int findNumberOfElement(List elements) {
         return elements.size();
     }
+
+    public List reverse(List emptyList) {
+        return emptyList;
+    }
 }
