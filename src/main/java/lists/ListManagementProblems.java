@@ -1,5 +1,6 @@
 package lists;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -57,10 +58,37 @@ public class ListManagementProblems {
     public boolean palandrom(List<String> elements) {
         if (elements.size() <= ONE)
             return true;
+        if (isFirstEqualLast(elements))
+            return palandrom(getNewElementsWithoutFirstAndLast(elements));
+        return false;
+    }
+
+    private List<String> getNewElementsWithoutFirstAndLast(List<String> elements) {
+        final int lastIndexToAdd = elements.size() - TAIL_BUT_ONE_MIN_SIZE;
+        return elements.subList(ONE, lastIndexToAdd);
+    }
+
+    private boolean isFirstEqualLast(List<String> elements) {
         final int lastIndex = elements.size() - ONE;
-        if (elements.get(FIRST_INDEX).equals(elements.get(lastIndex)))
-            return palandrom(elements.subList(ONE, elements.size() - TAIL_BUT_ONE_MIN_SIZE));
-        else
-            return false;
+        return elements.get(FIRST_INDEX).equals(elements.get(lastIndex));
+    }
+
+    public List flatten(List... lists) {
+        List flattenList = new ArrayList();
+        for (List listToAdd : lists) {
+
+            flattenList = addElement(listToAdd, flattenList);
+        }
+        return flattenList;
+    }
+
+    private List addElement(List listToAdd, List flattenList) {
+        for (Object element : listToAdd) {
+            if (element instanceof List)
+                return addElement((List) element, flattenList);
+            else
+                flattenList.add(element);
+        }
+        return flattenList;
     }
 }
