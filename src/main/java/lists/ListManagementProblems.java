@@ -56,6 +56,9 @@ public class ListManagementProblems {
     public boolean palandrom(List<String> elements) {
         if (elements.size() <= ONE)
             return true;
-        return false;
+        if (elements.get(0).equals(elements.get(elements.size() - 1)))
+            return palandrom(elements.subList(1, elements.size() - 2));
+        else
+            return false;
     }
 }
