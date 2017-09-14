@@ -3,7 +3,16 @@ package lists;
 import java.util.List;
 
 public class ListManagementProblems {
-    public String lastElement(List emptyList) {
-        return "";
+
+    private final String EMPTY_STRING = "";
+    private final int ONE = 1;
+
+    public String my_last(List elements) {
+        if (elements.isEmpty())
+            return EMPTY_STRING;
+        else {
+            final int lastElementIndex = elements.size() - ONE;
+            return (String) elements.get(lastElementIndex);
+        }
     }
 }
