@@ -31,4 +31,9 @@ public class ListTests {
     public void should_return_empty_string_when_empty_list() {
         Assert.assertEquals("", listManagementProblems.my_last_but_one(Collections.EMPTY_LIST));
     }
+
+    @Test
+    public void should_return_empty_string_when_list_size_is_equal_one() {
+        Assert.assertEquals("", listManagementProblems.my_last_but_one(Arrays.asList(new String[]{"b"})));
+    }
 }
