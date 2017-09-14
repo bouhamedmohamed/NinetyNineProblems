@@ -79,4 +79,11 @@ public class ListTests {
         Assert.assertEquals("b", reverse.get(0));
         Assert.assertEquals("a", reverse.get(1));
     }
+
+    @Test
+    public void should_return_true__when_list_is_empty() {
+        final boolean palandrom = listManagementProblems.palandrom(Collections.EMPTY_LIST);
+        Assert.assertEquals(true, palandrom);
+
+    }
 }

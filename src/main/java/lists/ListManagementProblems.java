@@ -52,4 +52,8 @@ public class ListManagementProblems {
                 .sorted(Collections.reverseOrder())
                 .collect(Collectors.toList());
     }
+
+    public boolean palandrom(List<String> strings) {
+        return true;
+    }
 }
