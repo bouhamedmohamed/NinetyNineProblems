@@ -22,4 +22,8 @@ public class ListManagementProblems {
         final int lastElementByOneIndex = elements.size() - TAIL_BUT_ONE_MIN_SIZE;
         return (String) elements.get(lastElementByOneIndex);
     }
+
+    public String elementAt(List<List> lists, int i) {
+        return "";
+    }
 }
