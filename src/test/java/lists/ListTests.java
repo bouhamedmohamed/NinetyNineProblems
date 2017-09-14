@@ -36,4 +36,9 @@ public class ListTests {
     public void should_return_empty_string_when_list_size_is_equal_one() {
         Assert.assertEquals("", listManagementProblems.my_last_but_one(Arrays.asList(new String[]{"b"})));
     }
+
+    @Test
+    public void should_return_last_but_one_element_when_list_size_is_bigger_that_one() {
+        Assert.assertEquals("a", listManagementProblems.my_last_but_one(Arrays.asList(new String[]{"a","b"})));
+    }
 }
