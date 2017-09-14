@@ -117,7 +117,15 @@ public class ListTests {
         Assert.assertEquals("b", flattedString.get(1));
         Assert.assertEquals("c", flattedString.get(2));
         Assert.assertEquals("d", flattedString.get(3));
+    }
 
-
+    @Test
+    public void should_return_compress_list() {
+        final List flattedString = listManagementProblems.compress(asList("a","a","a","b","b","c","d","d"));
+        Assert.assertEquals(4, flattedString.size());
+        Assert.assertEquals("a", flattedString.get(0));
+        Assert.assertEquals("b", flattedString.get(1));
+        Assert.assertEquals("c", flattedString.get(2));
+        Assert.assertEquals("d", flattedString.get(3));
     }
 }

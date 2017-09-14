@@ -91,4 +91,8 @@ public class ListManagementProblems {
         }
         return flattenList;
     }
+
+    public List compress(List<String> elements) {
+        return elements.stream().distinct().collect(Collectors.toList());
+    }
 }
