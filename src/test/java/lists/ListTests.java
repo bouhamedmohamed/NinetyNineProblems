@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class ListTests {
 
@@ -70,5 +71,12 @@ public class ListTests {
     @Test
     public void should_return_empty_list_in_case_of_emptylist() {
         Assert.assertEquals(Collections.EMPTY_LIST, listManagementProblems.reverse(Collections.EMPTY_LIST));
+    }
+
+    @Test
+    public void should_return_reversed_list_when_list_has_two_element() {
+        final List reverse = listManagementProblems.reverse(Arrays.asList(new String[]{"a", "b"}));
+        Assert.assertEquals("b", reverse.get(0));
+        Assert.assertEquals("a", reverse.get(1));
     }
 }

@@ -1,6 +1,8 @@
 package lists;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListManagementProblems {
 
@@ -45,7 +47,9 @@ public class ListManagementProblems {
         return elements.size();
     }
 
-    public List reverse(List emptyList) {
-        return emptyList;
+    public List reverse(List elements) {
+        return (List) elements.stream()
+                .sorted(Collections.reverseOrder())
+                .collect(Collectors.toList());
     }
 }
