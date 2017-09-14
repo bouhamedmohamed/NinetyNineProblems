@@ -53,7 +53,9 @@ public class ListManagementProblems {
                 .collect(Collectors.toList());
     }
 
-    public boolean palandrom(List<String> strings) {
-        return true;
+    public boolean palandrom(List<String> elements) {
+        if (elements.size() <= ONE)
+            return true;
+        return false;
     }
 }

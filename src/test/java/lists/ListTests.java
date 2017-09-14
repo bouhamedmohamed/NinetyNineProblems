@@ -86,4 +86,11 @@ public class ListTests {
         Assert.assertEquals(true, palandrom);
 
     }
+
+    @Test
+    public void should_return_true__when_list_has_one_element() {
+        final boolean palandrom = listManagementProblems.palandrom(Arrays.asList(new String[]{"a"}));
+        Assert.assertEquals(true, palandrom);
+
+    }
 }
