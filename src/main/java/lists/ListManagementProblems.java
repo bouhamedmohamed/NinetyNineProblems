@@ -23,7 +23,20 @@ public class ListManagementProblems {
         return (String) elements.get(lastElementByOneIndex);
     }
 
-    public String elementAt(List<List> lists, int i) {
-        return "";
+    public String elementAt(List elements, int position) {
+        if (elements.isEmpty())
+            return EMPTY_STRING;
+        else {
+            if (!matchPositionInList(position, elements))
+                throw new ArrayIndexOutOfBoundsException();
+            return EMPTY_STRING;
+        }
+    }
+
+    private boolean matchPositionInList(int position, List elements) {
+        if (position > elements.size() || position < ONE)
+            return false;
+        return true;
+
     }
 }

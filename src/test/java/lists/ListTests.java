@@ -44,7 +44,12 @@ public class ListTests {
 
     @Test
     public void should_return_empty_string_when_list_size_is_empty() {
-        Assert.assertEquals("", listManagementProblems.elementAt(Arrays.asList(Collections.EMPTY_LIST), 1));
+        Assert.assertEquals("", listManagementProblems.elementAt(Collections.EMPTY_LIST, 0));
+    }
+
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
+    public void should_return_exception_when_position_doesnt_match_in_list() {
+        listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b", "c"}), 4);
     }
 
 }
