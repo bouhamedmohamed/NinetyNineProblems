@@ -51,5 +51,8 @@ public class ListTests {
     public void should_return_exception_when_position_doesnt_match_in_list() {
         listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b", "c"}), 4);
     }
-
+    @Test
+    public void should_return_element_at_given_position() {
+        Assert.assertEquals("b", listManagementProblems.elementAt(Arrays.asList(new String[]{"a", "b"}), 2));
+    }
 }
