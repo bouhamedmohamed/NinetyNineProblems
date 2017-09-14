@@ -15,4 +15,8 @@ public class ListManagementProblems {
             return (String) elements.get(lastElementIndex);
         }
     }
+
+    public String my_last_but_one(List emptyList) {
+        return "";
+    }
 }
